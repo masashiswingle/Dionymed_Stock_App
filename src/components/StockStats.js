@@ -1,27 +1,26 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
 import StockRow from './StockRow';
 
 const StockStats = ({ info }) => {
   function renderRow () {
-    
     return Object.keys(info).map(data => {
       return <StockRow key={data} name={data} val={info[data]} />
     });
   }
 
   return (
-    <View style={styles.viewStyle}>
+    <ScrollView style={styles.viewStyle}>
       {renderRow()}
-    </View> 
+    </ScrollView> 
   )
 };
 
 const styles = {
   viewStyle: {
     display: 'flex',
+    height: 400,
     flexDirection: 'column',
-    height: 50,
   }
 };
 

@@ -16,7 +16,6 @@ const Button = ({ onPress, children }) => {
 const styles = {
   buttonStyle: {  
     alignSelf: 'stretch',
-    backgroundColor: '#007aff',
     borderRadius: 5, 
     borderWidth: 1, 
     borderColor: '#007aff',
